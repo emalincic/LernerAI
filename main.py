@@ -59,23 +59,6 @@ def generar_respuesta(chat_completo):
         yield frase.choices[0].delta.content 
         # - mostrar el CONTENIDO de la variable a demanda
     return respuesta_completa # return / funciones - mostrar la variable en sí
-
-
-# def main():
-#     modelo = configurar_pagina()
-#     clienteUsuario = crear_usuario_groq()
-#     inicializar_estado()
-#     area_chat()
-#     mensaje = st.chat_input("Escribí tu mensaje")
-#     print(mensaje)
-#     if mensaje:
-#         actualizar_historial("user", mensaje, "🙂")
-#         chat_completo = configurar_modelo(clienteUsuario, modelo, mensaje)
-#         if chat_completo:
-#             with st.chat_message("assistant"):
-#                 respuesta_completa = st.write_stream(generar_respuesta(chat_completo))
-#                 actualizar_historial("assistant", chat_completo,"🤖")
-#         st.rerun()
         
 def main():
     modelo = configurar_pagina()
