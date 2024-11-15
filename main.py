@@ -24,7 +24,7 @@ MODELOS = [
 # 3. espacio en la interfaz
 
 def area_chat():
-    contenedorDelChat = st.container(height=700, border=False)
+    contenedorDelChat = st.container(border=False)
     with contenedorDelChat:
         mostrar_historial()
 
