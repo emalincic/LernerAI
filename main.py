@@ -1,5 +1,7 @@
 import streamlit as st
 from groq import Groq
+from openai import OpenAI 
+import os
 
 def configurar_pagina():
     st.title("LernerAI")
@@ -16,9 +18,8 @@ def inicializar_estado():
         st.session_state.mensajes = []
 
 MODELOS = [
-    'llama3-8b-8192',
-    'llama3-70b-8192',
-    'mixtral-8x7b-32768'
+    'nvidia/Llama-3.1-Nemotron-70B-Instruct',
+    'llama3-70b-8192'
 ]
 
 # 3. espacio en la interfaz
@@ -34,7 +35,7 @@ def configurar_modelo(cliente, modelo, mensajeDeEntrada):
     messages=[{"role": "user", "content": mensajeDeEntrada}],
     stream=True
 )
-
+    
 mensajes = []
 
 # 1. actualizar historial
