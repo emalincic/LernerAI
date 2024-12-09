@@ -1,7 +1,5 @@
 import streamlit as st
 from groq import Groq
-from openai import OpenAI 
-import os
 
 def configurar_pagina():
     st.title("LernerAI")
@@ -18,7 +16,6 @@ def inicializar_estado():
         st.session_state.mensajes = []
 
 MODELOS = [
-    'nvidia/Llama-3.1-Nemotron-70B-Instruct',
     'llama3-70b-8192'
 ]
 
